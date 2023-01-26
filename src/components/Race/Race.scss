@@ -1,0 +1,125 @@
+@import "../../Colors.scss";
+
+.race-section {
+  background-image: url("https://www.racecar-engineering.com/wp-content/uploads/2020/09/XPB_1056796_HiRes-scaled-e1600188435941.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  height: 580px;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .main-title-wrapper {
+    width: 900px;
+    margin-top: 40px;
+  }
+}
+
+.race-card {
+  min-width: 80%;
+  // display: flex;
+  // flex-wrap: wrap;
+  // min-height: 250px;
+  // background-color: white;
+  margin: 0rem;
+  // padding: 20px;
+  border-radius: 10px;
+
+  .top-bar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid $lightColor;
+    margin: 10px;
+  }
+  .next-race-title {
+    font-family: FormulaBold;
+    font-size: 3rem;
+    color: $lightColor;
+    display: inline-block;
+  }
+  .circuit-name {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: $lightColor;
+  }
+  .race-date {
+    font-size: 3rem;
+    text-align: center;
+    color: $lightColor;
+  }
+  .circuit-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 10px;
+
+    .next-race-circuit-map {
+      max-width: 350px;
+    }
+    .btn-go-to-race {
+      border-radius: 8px;
+      border: 1px solid transparent;
+      padding: 12px 20px;
+      font-size: 1.3rem;
+
+      font-family: FormulaRegular;
+      color: $lightColor;
+      background-color: $darkColor;
+      cursor: pointer;
+      transition: 0.75s;
+    }
+    .btn-go-to-race:hover {
+      background-color: $lightColor;
+      border-radius: 8px;
+      color: $darkColor;
+    }
+  }
+
+  // @media screen and (max-width: 1000px) {
+  //   .main-title-wrapper {
+  //     // width: 50% !important;
+  //     // font-size: 1rem;
+  //   }
+  // }
+
+  @media screen and (max-width: 800px) {
+    .race-card .top-bar {
+      flex-direction: column;
+    }
+    .race-card .next-race-title {
+      font-size: 1rem;
+    }
+    // .main-section {
+    //   width: 100% !important;
+    // }
+  }
+
+  @media screen and (max-width: 600px) {
+    .next-race-title,
+    .circuit-name,
+    .top-bar {
+      font-size: 1.8rem !important;
+      text-align: center;
+      flex-direction: column;
+    }
+    .race-date {
+      font-size: 1.5rem !important;
+      margin-bottom: 10px;
+    }
+    .circuit-info {
+      width: 100%;
+    }
+    .next-race-circuit-map {
+      width: 70%;
+    }
+    .btn-go-to-race {
+      font-size: 1rem !important;
+    }
+  }
+}

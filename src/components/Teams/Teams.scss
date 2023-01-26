@@ -1,0 +1,122 @@
+@import "../../Colors.scss";
+
+.constructor-ranking-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .teams-cards {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+
+    .team-card {
+      padding: 1rem 1rem 0 1rem;
+      margin: 0 2% 1rem 0;
+      border-top-right-radius: 10px;
+      border-top: 4px solid $darkColor;
+      border-right: 4px solid $darkColor;
+      width: 33%;
+
+      .card-top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .points-badge {
+        font-family: FormulaBold;
+      }
+
+      .car-image-container {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      img {
+        display: block;
+        width: 3rem;
+        height: auto;
+        margin: 5px 0;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .team-name {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        font-family: FormulaBold;
+        color: $darkColor;
+
+        .team-logo {
+          display: block;
+          width: 3rem;
+          height: auto;
+          margin: 5px 0;
+        }
+      }
+      .team-win {
+        font-family: FormulaBold;
+      }
+      .top-bar {
+        display: flex;
+        justify-content: space-between;
+        flex: row;
+        align-items: center;
+        border-bottom: 1px solid $darkColor;
+      }
+
+      .bottom-bar {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $darkColor;
+      }
+
+      .dummy-text {
+        text-align: center;
+      }
+
+      .team-mid-bar {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $darkColor;
+
+        a {
+          color: $redColor;
+          text-decoration: none;
+          &:hover {
+            color: $darkColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .team-card {
+    width: 40% !important;
+  }
+  .team-name {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .team-card {
+    width: 96% !important;
+    margin: 5px !important;
+  }
+}

@@ -1,0 +1,33 @@
+@import "./Colors.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: FormulaRegular;
+  box-sizing: border-box;
+  margin-bottom: 60px;
+}
+
+@font-face {
+  font-family: "FormulaRegular";
+  src: local("FormulaRegular"),
+    url(fonts/Formula1-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "FormulaBlack";
+  src: local("Formula1-Black"), url(fonts/Formula1-Black.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "FormulaBold";
+  src: local("FormulaBold"), url(fonts/Formula1-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "FormulaWide";
+  src: local("FormulaWide"), url(fonts/Formula1-Wide.ttf) format("truetype");
+}

@@ -1,0 +1,199 @@
+@import ".././Colors.scss";
+
+.schedule-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.circuit-2023-cards {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  // align-items: center;
+  padding: 2rem 0;
+
+  .racecircuit-card {
+    padding: 1rem 1rem 0 1rem;
+    margin: 0 0.8rem 0.8rem 0;
+    border-top-right-radius: 10px;
+    border-top: 2px solid $darkColor;
+    border-right: 2px solid $darkColor;
+    width: 40%;
+
+    .circuit-top-bar {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid $darkColor;
+    }
+    .cicruit-name {
+      max-width: 100%;
+      font-size: 1.5rem;
+      margin-bottom: 2px;
+      font-family: FormulaBold;
+    }
+    .race-date {
+      font-size: 1.15rem;
+      text-align: center;
+    }
+  }
+}
+.circuit-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+.circuit-map {
+  width: 300px;
+}
+
+.mid-section-wrapper {
+  margin: 0.8rem 0;
+  border-bottom: 1px solid $darkColor;
+
+  .country-name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.7rem;
+    justify-content: space-between;
+
+    .team-name {
+      width: 0.5rem;
+      height: 2.2rem;
+      margin-right: 0.5rem;
+      background-color: $darkColor;
+      border: 1px solid $lightColor;
+    }
+    p {
+      font-weight: 400;
+      font-family: FormulaRegular;
+      letter-spacing: 0.5px;
+      line-height: 15px;
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
+    .country-bold {
+      font-family: FormulaBold;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}
+
+table {
+  width: 100%;
+  max-width: 800px;
+  border-collapse: collapse;
+  overflow: hidden;
+  // box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+th,
+td {
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: black;
+}
+
+th {
+  text-align: left;
+}
+
+thead {
+  th {
+    background-color: $redColor;
+    color: $darkColor;
+  }
+}
+tbody {
+  tr {
+    &:hover {
+      background-color: rgba(107, 98, 98, 0.267);
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .schedule-wrapper {
+    width: 100% !important;
+  }
+  .circuit-2023-cards,
+  .racecircuit-card {
+    width: 100% !important;
+  }
+  .circuit-2023-cards .racecircuit-card .circuit-top-bar {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .circuit-2023-cards .racecircuit-card .cicruit-name {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .circuit-2023-cards .racecircuit-card .race-date {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  th,
+  td {
+    padding: 2px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .main-title-wrapper {
+    width: 90% !important;
+    font-size: 1rem;
+    margin-right: 10px;
+    .title {
+      font-size: 3rem;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .main-title-wrapper {
+    width: 90% !important;
+    font-size: 0.7rem;
+    margin-right: 10px;
+    .title {
+      font-size: 2rem;
+    }
+  }
+
+  .circuit-2023-cards,
+  .racecircuit-card {
+    width: 98% !important;
+  }
+  .circuit-2023-cards .racecircuit-card .circuit-top-bar {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .circuit-2023-cards .racecircuit-card .cicruit-name {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .circuit-2023-cards .racecircuit-card .race-date {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .container {
+    // width: 350px;
+    display: flex;
+    justify-content: center;
+  }
+  th,
+  td {
+    padding: 2px;
+  }
+}
