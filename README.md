@@ -14,8 +14,8 @@ npm run backend
 
 ## Register to login or use: 
 
-email: test@gmail.com
-password: testuser
+- email: test@gmail.com
+- password: testuser
 
 ### Built with:
 
