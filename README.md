@@ -12,7 +12,7 @@ npm run dev
 
 npm run backend
 
-## Register to login or use: 
+### Register to login or use: 
 
 - email: test@gmail.com
 - password: testuser
