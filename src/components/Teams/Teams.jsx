@@ -8,7 +8,7 @@ function Teams() {
 
   const getTeams = async () => {
     const result = await fetch(
-      `http://ergast.com/api/f1/2022/constructorStandings.json`
+      `http://ergast.com/api/f1/2023/constructorStandings.json`
     )
       .then((res) => res.json())
       .then((result) =>

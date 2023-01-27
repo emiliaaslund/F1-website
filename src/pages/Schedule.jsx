@@ -31,7 +31,7 @@ function Schedule() {
 
   const variants = {
     initial: { x: "-100%", opacity: 0 },
-    animate: { x: 0, opacity: 1, transition: { duration: 0.3 } },
+    animate: { x: 0, opacity: 1, transition: { delay: 0.5, duration: 0.3 } },
   };
 
   return (

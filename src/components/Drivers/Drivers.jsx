@@ -107,8 +107,8 @@ function Drivers() {
                 alt={`${getFlagName(driver)}-1-flag`}
                 onError={({ currentTarget }) => {
                   currentTarget.onerror = null;
-                  currentTarget.src =
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Question_mark_%28black%29.svg/800px-Question_mark_%28black%29.svg.png";
+                  // currentTarget.src =
+                  //   "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Question_mark_%28black%29.svg/800px-Question_mark_%28black%29.svg.png";
                 }}
               />
             </div>

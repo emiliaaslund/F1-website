@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { redirect } from "react-router-dom";
 import axios from "axios";
 // import { getCurrentSeason } from "../api/api";
 
@@ -11,20 +10,22 @@ function Register(props) {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [auth, setAuth] = useState("");
-  const id = new Date().toISOString().slice(0, 10);
+  const id = new Date();
   const navigate = useNavigate();
 
   const handleSubmit = async () => {
     const newUser = await axios
-      .post("http://localhost:3000/users/", {
+      .post("http://localhost:3000/users", {
         id,
         email: email,
         username: username,
         password: password,
       })
       .then((res) => {
-        console.log(res);
-        navigate(res.data ? "/profile" : "/");
+        console.log("User created");
+        setAuth(res.data);
+        location.reload();
+        // navigate(res.data ? "/login" : "/");
       })
       .catch((error) => {
         console.error(error);
@@ -46,6 +47,7 @@ function Register(props) {
       >
         <label htmlFor="name">Email: </label>
         <input
+          required
           value={email}
           name="email"
           onChange={(e) => setEmail(e.target.value)}
@@ -54,6 +56,7 @@ function Register(props) {
         />
         <label htmlFor="name">Username: </label>
         <input
+          required
           value={username}
           name="username"
           onChange={(e) => setUsername(e.target.value)}
@@ -62,6 +65,7 @@ function Register(props) {
         />
         <label htmlFor="password">Password: </label>
         <input
+          required
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           type="password"
