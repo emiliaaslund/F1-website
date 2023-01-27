@@ -6,11 +6,16 @@ A Formula One Website for school to see driver/constructor-standings, race-sched
 
 npm install
 
-npm install -g json-server
+npm install -D json-server json-server-auth
 
 npm run dev
 
 npm run backend
+
+## Register to login or use: 
+
+email: test@gmail.com
+password: testuser
 
 ### Built with:
 
