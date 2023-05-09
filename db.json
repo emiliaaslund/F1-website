@@ -5,6 +5,12 @@
       "password": "$2a$10$f.76jp2CUmyXnz7nuSUNYuE7YEkOzLEU5M075C7UStAP.YK4oUc9C",
       "id": "2023-01-27T13:25:50.251Z",
       "username": "TestUser"
+    },
+    {
+      "email": "test@test.com",
+      "password": "$2a$10$Wi195HhsHvnmsx9RBDee/umhy0AAVTM3HLtRZ1v.26uP1fNcuVNyq",
+      "id": "2023-05-09T18:39:41.569Z",
+      "username": "Banan"
     }
   ]
 }

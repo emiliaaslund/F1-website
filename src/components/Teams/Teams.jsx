@@ -79,7 +79,7 @@ function Teams() {
           </div>
           <div className="team-mid-bar">
             <div className="team-win">
-              <p>Racewins {team.wins}</p>
+              <p>Racewins. {team.wins}</p>
             </div>
             <div>
               <a href={team.Constructor.url} target="_blank">

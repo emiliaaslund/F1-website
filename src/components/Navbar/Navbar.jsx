@@ -28,7 +28,9 @@ function Navbar() {
   // console.log(currentUser, "current");
 
   const handleLogout = () => {
-    sessionStorage.clear("user");
+    sessionStorage.clear();
+    localStorage.clear();
+    console.log(currentUser, "denna ska vara tom efter logout");
     navigate("/");
   };
 

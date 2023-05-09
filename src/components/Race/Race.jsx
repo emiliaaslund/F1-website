@@ -7,12 +7,13 @@ function Race() {
   const [race, setRace] = useState([]);
 
   const getCircuit = async () => {
-    const result = await fetch(`https://ergast.com/api/f1/2023.json`)
-      .then((res) => res.json())
-      .then((result) => setRace(result.MRData.RaceTable.Races[0]))
-      .catch((error) => {
-        console.error(error);
-      });
+    const today = new Date().toISOString().split("T")[0];
+    const url = `https://ergast.com/api/f1/current.json?limit=100&offset=0`;
+    const response = await fetch(url);
+    const data = await response.json();
+    const races = data.MRData.RaceTable.Races;
+    const race = races.find((race) => race.date > today);
+    setRace(race);
   };
 
   const correctLocation = (race) => {
@@ -30,6 +31,10 @@ function Race() {
   useEffect(() => {
     getCircuit();
   }, []);
+
+  if (!race) {
+    return <div>Loading...</div>;
+  }
 
   const variants = {
     initial: { x: "-100%", opacity: 0 },

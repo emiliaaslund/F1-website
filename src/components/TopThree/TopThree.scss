@@ -92,11 +92,6 @@
   color: $lightColor;
 }
 
-.winner-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 500px;
-}
 .driver-dummy-text {
   font-size: 2rem;
   color: $lightColor;
@@ -116,7 +111,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  margin-bottom: 50px;
+  margin-bottom: 150px;
 }
 .winner-image {
   width: 1200px;
@@ -140,7 +135,9 @@
     font-size: 1.5rem;
   }
   .winner-wrapper {
+    margin-top: 10px;
     width: 100%;
+    margin-bottom: 20px;
   }
   .winner-image {
     flex-direction: column;

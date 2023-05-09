@@ -8,7 +8,7 @@ function ProfilePage() {
   const [users, setUsers] = useState([]);
   const [isInlogged, setIsInLogged] = useState([]);
   const [profileUser, setProfileUser] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [showDiv, setShowDiv] = useState(false);
   const navigate = useNavigate();
 
@@ -17,28 +17,51 @@ function ProfilePage() {
     let foundUser = JSON.parse(sessionStorage.getItem("user"));
     if (foundUser) {
       setIsInLogged(foundUser);
+      // console.log(isInlogged);
     }
   };
 
+  // const getPersonalInfo = async () => {
+  //   const result = await fetch(`http://localhost:3000/users/`)
+  //     .then((res) => res.json())
+  //     .then((result) => setUsers(result));
+  // };
   const getPersonalInfo = async () => {
-    const result = await fetch(`http://localhost:3000/users/`)
-      .then((res) => res.json())
-      .then((result) => setUsers(result));
+    try {
+      const response = await fetch(`http://localhost:3000/users/`);
+      const data = await response.json();
+      setUsers(data);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   //jämför inlogg med databas
-  const filterUser = async () => {
+  // const filterUser = async () => {
+  //   setLoading(true);
+  //   const findUser = users.filter(
+  //     (user) => user.email === isInlogged.user.email
+  //   );
+  //   setProfileUser(findUser);
+  //   setLoading(false);
+  // };
+  const filterUser = () => {
     setLoading(true);
     const findUser = users.filter(
       (user) => user.email === isInlogged.user.email
     );
     setProfileUser(findUser);
+    setLoading(false);
   };
 
   useEffect(() => {
-    filterUser();
-    getPersonalInfo();
-    getData();
+    const fetchData = async () => {
+      await getPersonalInfo();
+      filterUser();
+      getData();
+    };
+
+    fetchData();
   }, []);
 
   return (
